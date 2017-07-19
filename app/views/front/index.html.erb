@@ -1,2 +1,15 @@
 <h1>Front#index</h1>
 <p>Find me in app/views/front/index.html.erb</p>
+
+<%= form_tag ("/messages"), method: "post" do %>
+
+    <%= label_tag(:new_message, "Search messag:")  %>
+  <%= text_field_tag (:new_message) %>
+
+  <%= submit_tag ("Submit") %>
+
+<% end %>
+
+<%if @new_message %>
+    <%=@new_message %>
+<%end%> 
